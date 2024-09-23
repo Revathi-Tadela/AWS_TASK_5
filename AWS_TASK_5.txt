@@ -1,0 +1,470 @@
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Fri Sep 20 11:19:50 2024 from 13.233.177.4
+[ec2-user@ip-172-31-10-192 ~]$ git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo
+Cloning into 'Guvi-Repo'...
+Username for 'https://git-codecommit.ap-south-1.amazonaws.com': AKIA2UC3B477KVGF3NBQ
+Password for 'https://AKIA2UC3B477KVGF3NBQ@git-codecommit.ap-south-1.amazonaws.com': 
+fatal: unable to access 'https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo/': The requested URL returned error: 403
+[ec2-user@ip-172-31-10-192 ~]$ git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo
+Cloning into 'Guvi-Repo'...
+Username for 'https://git-codecommit.ap-south-1.amazonaws.com': AKIA2UC3B477KVGF3NBQ
+Password for 'https://AKIA2UC3B477KVGF3NBQ@git-codecommit.ap-south-1.amazonaws.com': 
+fatal: unable to access 'https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo/': The requested URL returned error: 403
+[ec2-user@ip-172-31-10-192 ~]$ git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo
+Cloning into 'Guvi-Repo'...
+Username for 'https://git-codecommit.ap-south-1.amazonaws.com': policy_user-at-730335406078
+Password for 'https://policy_user-at-730335406078@git-codecommit.ap-south-1.amazonaws.com': 
+remote: Counting objects: 3, done.
+Unpacking objects: 100% (3/3), 216 bytes | 216.00 KiB/s, done.
+[ec2-user@ip-172-31-10-192 ~]$ vi index.html
+[ec2-user@ip-172-31-10-192 ~]$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+[ec2-user@ip-172-31-10-192 ~]$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/ec2-user/.git/
+[ec2-user@ip-172-31-10-192 ~]$ git add .
+warning: adding embedded git repository: Guvi-Repo
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:   git submodule add <url> Guvi-Repo
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:   git rm --cached Guvi-Repo
+hint: 
+hint: See "git help submodule" for more information.
+[ec2-user@ip-172-31-10-192 ~]$ git rm --cached Guvi-Repo
+error: the following file has staged content different from both the
+file and the HEAD:
+    Guvi-Repo
+(use -f to force removal)
+[ec2-user@ip-172-31-10-192 ~]$ git rm -f --cached Guvi-Repo
+rm 'Guvi-Repo'
+[ec2-user@ip-172-31-10-192 ~]$ git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo
+fatal: destination path 'Guvi-Repo' already exists and is not an empty directory.
+[ec2-user@ip-172-31-10-192 ~]$ cd Guvi-Repo/
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ ls -lrt
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 20 Sep 20 11:46 testfile.txt
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ vi index.html
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ vi index.html
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git add ,
+fatal: pathspec ',' did not match any files
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git add .
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git commit -m "Initial commit"
+[main d093519] Initial commit
+ Committer: EC2 Default User <ec2-user@ip-172-31-10-192.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo'
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git push origin mastergit ^C
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git branch
+* main
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git push origin main
+Username for 'https://git-codecommit.ap-south-1.amazonaws.com': policy_user-at-730335406078
+Password for 'https://policy_user-at-730335406078@git-codecommit.ap-south-1.amazonaws.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 449 bytes | 449.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: Validating objects: 100%
+To https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Guvi-Repo
+   549c0fe..d093519  main -> main
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ vi buildspec.yml
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        buildspec.yml
+
+nothing added to commit but untracked files present (use "git add" to track)
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ ls -lrt
+total 12
+-rw-r--r--. 1 ec2-user ec2-user  20 Sep 20 11:46 testfile.txt
+-rw-r--r--. 1 ec2-user ec2-user 183 Sep 20 12:04 index.html
+-rw-r--r--. 1 ec2-user ec2-user 223 Sep 20 12:10 buildspec.yml
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ sudo service codedeploy-agent status
+Redirecting to /bin/systemctl status codedeploy-agent.service
+Unit codedeploy-agent.service could not be found.
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ sudo yum install -y codedeploy-agent
+sudo service codedeploy-agent start
+Last metadata expiration check: 5:01:40 ago on Fri Sep 20 11:14:50 2024.
+No match for argument: codedeploy-agent
+Error: Unable to find a match: codedeploy-agent
+Redirecting to /bin/systemctl start codedeploy-agent.service
+Failed to start codedeploy-agent.service: Unit codedeploy-agent.service not found.
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ ^C
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ sudo yum install -y codedeploy-agent
+Last metadata expiration check: 5:02:09 ago on Fri Sep 20 11:14:50 2024.
+No match for argument: codedeploy-agent
+Error: Unable to find a match: codedeploy-agent
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ sudo yum update -y
+Last metadata expiration check: 5:02:41 ago on Fri Sep 20 11:14:50 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ cd /home/ec2-user
+[ec2-user@ip-172-31-10-192 ~]$ wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+--2024-09-20 16:18:10--  https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+Resolving bucket-name.s3.region-identifier.amazonaws.com (bucket-name.s3.region-identifier.amazonaws.com)... failed: Name or service not known.
+wget: unable to resolve host address ‘bucket-name.s3.region-identifier.amazonaws.com’
+[ec2-user@ip-172-31-10-192 ~]$ wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+--2024-09-20 16:19:41--  https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+Resolving aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com (aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com)... 52.219.66.119, 3.5.211.152, 52.219.62.91, ...
+Connecting to aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com (aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com)|52.219.66.119|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19045 (19K) []
+Saving to: ‘install’
+
+install                                  100%[================================================================================>]  18.60K  --.-KB/s    in 0s      
+
+2024-09-20 16:19:41 (87.5 MB/s) - ‘install’ saved [19045/19045]
+
+[ec2-user@ip-172-31-10-192 ~]$ sudo chmod +x ./install
+[ec2-user@ip-172-31-10-192 ~]$ sudo ./install auto
+/usr/bin/env: ‘ruby’: No such file or directory
+[ec2-user@ip-172-31-10-192 ~]$ sudo systemctl enable codedeploy-agent
+Failed to enable unit: Unit file codedeploy-agent.service does not exist.
+[ec2-user@ip-172-31-10-192 ~]$ sudo yum install -y ruby
+Last metadata expiration check: 5:06:14 ago on Fri Sep 20 11:14:50 2024.
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                         Architecture                Version                                       Repository                        Size
+==================================================================================================================================================================
+Installing:
+ ruby3.2                                         x86_64                      3.2.2-180.amzn2023.0.3                        amazonlinux                       43 k
+Installing dependencies:
+ ruby3.2-default-gems                            noarch                      3.2.2-180.amzn2023.0.3                        amazonlinux                       34 k
+ ruby3.2-libs                                    x86_64                      3.2.2-180.amzn2023.0.3                        amazonlinux                      4.0 M
+ ruby3.2-rubygem-io-console                      x86_64                      0.6.0-180.amzn2023.0.3                        amazonlinux                       25 k
+ ruby3.2-rubygem-json                            x86_64                      2.6.3-180.amzn2023.0.3                        amazonlinux                       53 k
+ ruby3.2-rubygem-psych                           x86_64                      5.0.1-180.amzn2023.0.3                        amazonlinux                       52 k
+Installing weak dependencies:
+ ruby3.2-rubygem-bigdecimal                      x86_64                      3.1.3-180.amzn2023.0.3                        amazonlinux                       69 k
+ ruby3.2-rubygem-bundler                         noarch                      2.4.10-180.amzn2023.0.3                       amazonlinux                      384 k
+ ruby3.2-rubygem-rdoc                            noarch                      6.5.0-180.amzn2023.0.3                        amazonlinux                      461 k
+ ruby3.2-rubygems                                noarch                      3.4.10-180.amzn2023.0.3                       amazonlinux                      257 k
+
+Transaction Summary
+==================================================================================================================================================================
+Install  10 Packages
+
+Total download size: 5.3 M
+Installed size: 19 M
+Downloading Packages:
+(1/10): ruby3.2-3.2.2-180.amzn2023.0.3.x86_64.rpm                                                                                 877 kB/s |  43 kB     00:00    
+(2/10): ruby3.2-default-gems-3.2.2-180.amzn2023.0.3.noarch.rpm                                                                    658 kB/s |  34 kB     00:00    
+(3/10): ruby3.2-rubygem-bigdecimal-3.1.3-180.amzn2023.0.3.x86_64.rpm                                                              3.2 MB/s |  69 kB     00:00    
+(4/10): ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch.rpm                                                                 13 MB/s | 384 kB     00:00    
+(5/10): ruby3.2-rubygem-io-console-0.6.0-180.amzn2023.0.3.x86_64.rpm                                                              1.4 MB/s |  25 kB     00:00    
+(6/10): ruby3.2-libs-3.2.2-180.amzn2023.0.3.x86_64.rpm                                                                             36 MB/s | 4.0 MB     00:00    
+(7/10): ruby3.2-rubygem-json-2.6.3-180.amzn2023.0.3.x86_64.rpm                                                                    1.7 MB/s |  53 kB     00:00    
+(8/10): ruby3.2-rubygem-psych-5.0.1-180.amzn2023.0.3.x86_64.rpm                                                                   2.1 MB/s |  52 kB     00:00    
+(9/10): ruby3.2-rubygem-rdoc-6.5.0-180.amzn2023.0.3.noarch.rpm                                                                     22 MB/s | 461 kB     00:00    
+(10/10): ruby3.2-rubygems-3.4.10-180.amzn2023.0.3.noarch.rpm                                                                       11 MB/s | 257 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                              29 MB/s | 5.3 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Installing       : ruby3.2-libs-3.2.2-180.amzn2023.0.3.x86_64                                                                                              1/10 
+  Installing       : ruby3.2-rubygem-bigdecimal-3.1.3-180.amzn2023.0.3.x86_64                                                                                2/10 
+  Installing       : ruby3.2-default-gems-3.2.2-180.amzn2023.0.3.noarch                                                                                      3/10 
+  Installing       : ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch                                                                                  4/10 
+  Running scriptlet: ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch                                                                                  4/10 
+================================================================================
+
+Bundler and $GEM_HOME
+
+To get started with Bundler, you may need to restart your current shell or run:
+
+source /etc/profile.d/bundler.sh 
+
+For non-root users, this sets the GEM_HOME environment variable which specifies
+the default directory where RubyGems outside of the system path are installed.
+
+By default, $GEM_HOME will point to ~/.local/share/gem/ruby
+
+================================================================================
+
+  Installing       : ruby3.2-rubygem-io-console-0.6.0-180.amzn2023.0.3.x86_64                                                                                5/10 
+  Installing       : ruby3.2-rubygem-json-2.6.3-180.amzn2023.0.3.x86_64                                                                                      6/10 
+  Installing       : ruby3.2-rubygem-psych-5.0.1-180.amzn2023.0.3.x86_64                                                                                     7/10 
+  Installing       : ruby3.2-rubygem-rdoc-6.5.0-180.amzn2023.0.3.noarch                                                                                      8/10 
+  Installing       : ruby3.2-rubygems-3.4.10-180.amzn2023.0.3.noarch                                                                                         9/10 
+  Installing       : ruby3.2-3.2.2-180.amzn2023.0.3.x86_64                                                                                                  10/10 
+  Running scriptlet: ruby3.2-3.2.2-180.amzn2023.0.3.x86_64                                                                                                  10/10 
+  Running scriptlet: ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch                                                                                 10/10 
+  Running scriptlet: ruby3.2-rubygem-rdoc-6.5.0-180.amzn2023.0.3.noarch                                                                                     10/10 
+  Running scriptlet: ruby3.2-rubygems-3.4.10-180.amzn2023.0.3.noarch                                                                                        10/10 
+  Running scriptlet: ruby3.2-3.2.2-180.amzn2023.0.3.x86_64                                                                                                  10/10 
+  Verifying        : ruby3.2-3.2.2-180.amzn2023.0.3.x86_64                                                                                                   1/10 
+  Verifying        : ruby3.2-default-gems-3.2.2-180.amzn2023.0.3.noarch                                                                                      2/10 
+  Verifying        : ruby3.2-libs-3.2.2-180.amzn2023.0.3.x86_64                                                                                              3/10 
+  Verifying        : ruby3.2-rubygem-bigdecimal-3.1.3-180.amzn2023.0.3.x86_64                                                                                4/10 
+  Verifying        : ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch                                                                                  5/10 
+  Verifying        : ruby3.2-rubygem-io-console-0.6.0-180.amzn2023.0.3.x86_64                                                                                6/10 
+  Verifying        : ruby3.2-rubygem-json-2.6.3-180.amzn2023.0.3.x86_64                                                                                      7/10 
+  Verifying        : ruby3.2-rubygem-psych-5.0.1-180.amzn2023.0.3.x86_64                                                                                     8/10 
+  Verifying        : ruby3.2-rubygem-rdoc-6.5.0-180.amzn2023.0.3.noarch                                                                                      9/10 
+  Verifying        : ruby3.2-rubygems-3.4.10-180.amzn2023.0.3.noarch                                                                                        10/10 
+
+Installed:
+  ruby3.2-3.2.2-180.amzn2023.0.3.x86_64                                          ruby3.2-default-gems-3.2.2-180.amzn2023.0.3.noarch                              
+  ruby3.2-libs-3.2.2-180.amzn2023.0.3.x86_64                                     ruby3.2-rubygem-bigdecimal-3.1.3-180.amzn2023.0.3.x86_64                        
+  ruby3.2-rubygem-bundler-2.4.10-180.amzn2023.0.3.noarch                         ruby3.2-rubygem-io-console-0.6.0-180.amzn2023.0.3.x86_64                        
+  ruby3.2-rubygem-json-2.6.3-180.amzn2023.0.3.x86_64                             ruby3.2-rubygem-psych-5.0.1-180.amzn2023.0.3.x86_64                             
+  ruby3.2-rubygem-rdoc-6.5.0-180.amzn2023.0.3.noarch                             ruby3.2-rubygems-3.4.10-180.amzn2023.0.3.noarch                                 
+
+Complete!
+[ec2-user@ip-172-31-10-192 ~]$ sudo ./install auto
+I, [2024-09-20T16:21:15.744262 #37380]  INFO -- : Starting Ruby version check.
+W, [2024-09-20T16:21:15.744472 #37380]  WARN -- : The Ruby version in /usr/bin/ruby3.2 is 3.2.2, . Attempting to install anyway.
+I, [2024-09-20T16:21:15.744554 #37380]  INFO -- : Starting update check.
+I, [2024-09-20T16:21:15.744600 #37380]  INFO -- : Attempting to automatically detect supported package manager type for system...
+I, [2024-09-20T16:21:15.755286 #37380]  INFO -- : Checking AWS_REGION environment variable for region information...
+I, [2024-09-20T16:21:15.755410 #37380]  INFO -- : Checking EC2 metadata service for region information...
+I, [2024-09-20T16:21:15.763983 #37380]  INFO -- : Checking AWS_DOMAIN environment variable for domain information...
+I, [2024-09-20T16:21:15.764129 #37380]  INFO -- : Checking EC2 metadata service for domain information...
+I, [2024-09-20T16:21:15.768287 #37380]  INFO -- : Downloading version file from bucket aws-codedeploy-ap-south-1 and key latest/LATEST_VERSION...
+I, [2024-09-20T16:21:15.768482 #37380]  INFO -- : Endpoint: https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/LATEST_VERSION
+I, [2024-09-20T16:21:15.828849 #37380]  INFO -- : Downloading package from bucket aws-codedeploy-ap-south-1 and key releases/codedeploy-agent-1.7.0-92.noarch.rpm...
+I, [2024-09-20T16:21:15.829040 #37380]  INFO -- : Endpoint: https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/releases/codedeploy-agent-1.7.0-92.noarch.rpm
+I, [2024-09-20T16:21:15.901352 #37380]  INFO -- : Executing `/usr/bin/yum -y localinstall /tmp/codedeploy-agent-1.7.0-92.noarch.tmp-20240920-37380-ck0mxb.rpm`...
+Last metadata expiration check: 5:06:26 ago on Fri Sep 20 11:14:50 2024.
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                     Architecture                      Version                              Repository                               Size
+==================================================================================================================================================================
+Installing:
+ codedeploy-agent                            noarch                            1.7.0-92                             @commandline                            2.8 M
+
+Transaction Summary
+==================================================================================================================================================================
+Install  1 Package
+
+Total size: 2.8 M
+Installed size: 13 M
+Downloading Packages:
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Running scriptlet: codedeploy-agent-1.7.0-92.noarch                                                                                                         1/1 
+ 
+pre hook : 1
+Checking if there is already a process named codedeploy-agent running.
+
+  Installing       : codedeploy-agent-1.7.0-92.noarch                                                                                                         1/1 
+  Running scriptlet: codedeploy-agent-1.7.0-92.noarch                                                                                                         1/1 
+ 
+post hook : 1
+Check if there is a codedeployagent config file.
+Start codedeploy-agent in post hook if this is a first install.
+
+  Verifying        : codedeploy-agent-1.7.0-92.noarch                                                                                                         1/1 
+
+Installed:
+  codedeploy-agent-1.7.0-92.noarch                                                                                                                                
+
+Complete!
+I, [2024-09-20T16:21:18.177046 #37380]  INFO -- : Update check complete.
+I, [2024-09-20T16:21:18.177207 #37380]  INFO -- : Stopping updater.
+[ec2-user@ip-172-31-10-192 ~]$ sudo service codedeploy-agent status
+The AWS CodeDeploy agent is running as PID 37463
+[ec2-user@ip-172-31-10-192 ~]$ sudo systemctl enable codedeploy-agent
+Synchronizing state of codedeploy-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable codedeploy-agent
+[ec2-user@ip-172-31-10-192 ~]$ sudo service codedeploy-agent status
+The AWS CodeDeploy agent is running as PID 37463
+[ec2-user@ip-172-31-10-192 ~]$ yum install -y httpd
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-10-192 ~]$ sudo yum install -y httpd
+Last metadata expiration check: 5:32:13 ago on Fri Sep 20 11:14:50 2024.
+Dependencies resolved.
+==================================================================================================================================================================
+ Package                                    Architecture                  Version                                        Repository                          Size
+==================================================================================================================================================================
+Installing:
+ httpd                                      x86_64                        2.4.62-1.amzn2023                              amazonlinux                         48 k
+Installing dependencies:
+ apr                                        x86_64                        1.7.2-2.amzn2023.0.2                           amazonlinux                        129 k
+ apr-util                                   x86_64                        1.6.3-1.amzn2023.0.1                           amazonlinux                         98 k
+ generic-logos-httpd                        noarch                        18.0.0-12.amzn2023.0.3                         amazonlinux                         19 k
+ httpd-core                                 x86_64                        2.4.62-1.amzn2023                              amazonlinux                        1.4 M
+ httpd-filesystem                           noarch                        2.4.62-1.amzn2023                              amazonlinux                         14 k
+ httpd-tools                                x86_64                        2.4.62-1.amzn2023                              amazonlinux                         81 k
+ libbrotli                                  x86_64                        1.0.9-4.amzn2023.0.2                           amazonlinux                        315 k
+ mailcap                                    noarch                        2.1.49-3.amzn2023.0.3                          amazonlinux                         33 k
+Installing weak dependencies:
+ apr-util-openssl                           x86_64                        1.6.3-1.amzn2023.0.1                           amazonlinux                         17 k
+ mod_http2                                  x86_64                        2.0.27-1.amzn2023.0.3                          amazonlinux                        166 k
+ mod_lua                                    x86_64                        2.4.62-1.amzn2023                              amazonlinux                         61 k
+
+Transaction Summary
+==================================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm                                                                                       2.7 MB/s | 129 kB     00:00    
+(2/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                          334 kB/s |  17 kB     00:00    
+(3/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                                  1.8 MB/s |  98 kB     00:00    
+(4/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                                     921 kB/s |  19 kB     00:00    
+(5/12): httpd-2.4.62-1.amzn2023.x86_64.rpm                                                                                        1.8 MB/s |  48 kB     00:00    
+(6/12): httpd-core-2.4.62-1.amzn2023.x86_64.rpm                                                                                    28 MB/s | 1.4 MB     00:00    
+(7/12): httpd-filesystem-2.4.62-1.amzn2023.noarch.rpm                                                                             365 kB/s |  14 kB     00:00    
+(8/12): httpd-tools-2.4.62-1.amzn2023.x86_64.rpm                                                                                  2.4 MB/s |  81 kB     00:00    
+(9/12): mod_http2-2.0.27-1.amzn2023.0.3.x86_64.rpm                                                                                6.9 MB/s | 166 kB     00:00    
+(10/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                                 10 MB/s | 315 kB     00:00    
+(11/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                                 996 kB/s |  33 kB     00:00    
+(12/12): mod_lua-2.4.62-1.amzn2023.x86_64.rpm                                                                                     3.3 MB/s |  61 kB     00:00    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                              12 MB/s | 2.3 MB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                          1/1 
+  Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                         1/12 
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                            2/12 
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                    3/12 
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                    4/12 
+  Installing       : httpd-tools-2.4.62-1.amzn2023.x86_64                                                                                                    5/12 
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                   6/12 
+  Running scriptlet: httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                               7/12 
+  Installing       : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                               7/12 
+  Installing       : httpd-core-2.4.62-1.amzn2023.x86_64                                                                                                     8/12 
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                                  9/12 
+  Installing       : mod_lua-2.4.62-1.amzn2023.x86_64                                                                                                       10/12 
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                      11/12 
+  Installing       : httpd-2.4.62-1.amzn2023.x86_64                                                                                                         12/12 
+  Running scriptlet: httpd-2.4.62-1.amzn2023.x86_64                                                                                                         12/12 
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                         1/12 
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                    2/12 
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                            3/12 
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                       4/12 
+  Verifying        : httpd-2.4.62-1.amzn2023.x86_64                                                                                                          5/12 
+  Verifying        : httpd-core-2.4.62-1.amzn2023.x86_64                                                                                                     6/12 
+  Verifying        : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                               7/12 
+  Verifying        : httpd-tools-2.4.62-1.amzn2023.x86_64                                                                                                    8/12 
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                   9/12 
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                   10/12 
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                                 11/12 
+  Verifying        : mod_lua-2.4.62-1.amzn2023.x86_64                                                                                                       12/12 
+
+Installed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64                            apr-util-1.6.3-1.amzn2023.0.1.x86_64            apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64         
+  generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch          httpd-2.4.62-1.amzn2023.x86_64                  httpd-core-2.4.62-1.amzn2023.x86_64                  
+  httpd-filesystem-2.4.62-1.amzn2023.noarch                  httpd-tools-2.4.62-1.amzn2023.x86_64            libbrotli-1.0.9-4.amzn2023.0.2.x86_64                
+  mailcap-2.1.49-3.amzn2023.0.3.noarch                       mod_http2-2.0.27-1.amzn2023.0.3.x86_64          mod_lua-2.4.62-1.amzn2023.x86_64                     
+
+Complete!
+[ec2-user@ip-172-31-10-192 ~]$ sudo systemctl start httpd
+[ec2-user@ip-172-31-10-192 ~]$ ps -ef | grep httpd
+root       38901       1  0 16:47 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     38902   38901  0 16:47 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     38903   38901  0 16:47 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     38904   38901  0 16:47 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     38905   38901  0 16:47 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+ec2-user   39082   28089  0 16:47 pts/0    00:00:00 grep --color=auto httpd
+[ec2-user@ip-172-31-10-192 ~]$ 
+
+[ec2-user@ip-172-31-10-192 myapp]$ ls -lrt
+total 4
+drwxr-xr-x. 2 ec2-user ec2-user  23 Sep 20 17:47 scripts
+drwxr-xr-x. 2 ec2-user ec2-user  24 Sep 23 14:12 html
+-rw-r--r--. 1 ec2-user ec2-user 183 Sep 23 16:24 appspec.yml
+[ec2-user@ip-172-31-10-192 myapp]$ cd ..
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ ls -lrt
+total 16
+-rw-r--r--. 1 ec2-user ec2-user   20 Sep 20 11:46 testfile.txt
+drwxr-xr-x. 2 ec2-user ec2-user   23 Sep 20 17:47 scripts
+drwxr-xr-x. 2 ec2-user ec2-user   24 Sep 23 14:12 html
+-rw-r--r--. 1 ec2-user ec2-user  398 Sep 23 15:11 buildspec.yml
+-rw-r--r--. 1 ec2-user ec2-user  183 Sep 23 16:20 appspec.yml
+drwxr-xr-x. 4 ec2-user ec2-user   52 Sep 23 16:24 myapp
+-rw-r--r--. 1 ec2-user ec2-user 1344 Sep 23 16:25 myapp.zip
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ pwd
+/home/ec2-user/Guvi-Repo
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ cd myapp/
+[ec2-user@ip-172-31-10-192 myapp]$ ls -lrt
+total 4
+drwxr-xr-x. 2 ec2-user ec2-user  23 Sep 20 17:47 scripts
+drwxr-xr-x. 2 ec2-user ec2-user  24 Sep 23 14:12 html
+-rw-r--r--. 1 ec2-user ec2-user 183 Sep 23 16:24 appspec.yml
+[ec2-user@ip-172-31-10-192 myapp]$ vi appspec.yml 
+[ec2-user@ip-172-31-10-192 myapp]$ cat appspec.yml 
+version: 0.0
+os: linux
+files:
+  - source: html/index.html
+    destination: /var/www/html
+hooks:
+  AfterInstall:
+    - location: scripts/deploy.sh
+      timeout: 300
+      runas: root
+[ec2-user@ip-172-31-10-192 myapp]$ cd ../
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ vi buildspec.yml 
+[ec2-user@ip-172-31-10-192 Guvi-Repo]$ cat buildspec.yml 
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Building the project..."
+      - echo "No build step is required for a simple HTML app"
+
+artifacts:
+  files:
+    - html/index.html   # Adjust path if needed
+    - appspec.yml      # Include the appspec file
+    - html/*.css        # Include CSS files in the HTML directory
+    - html/*.js         # Include JS files in the HTML directory
